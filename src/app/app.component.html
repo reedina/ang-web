@@ -62,7 +62,7 @@
 
 <div class="row">
 <div class="col-xs 12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2 bs-example">
-    <form class="form-horizontal" #form="ngForm" (ngSubmit)="sendToAPI(form.value)">
+    <form class="form-horizontal" #form="ngForm" (submit)="sendToAPI(form.value)">
         <div class="form-group">
             <label for="inputTeam" class="control-label col-xs-2">Name</label>
             <div class="col-xs-10">

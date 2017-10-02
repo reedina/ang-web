@@ -1,0 +1,3 @@
+FROM nginx
+RUN apt-get update && apt-get install iputils-ping curl -y
+COPY dist /usr/share/nginx/html

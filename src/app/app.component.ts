@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Http } from '@angular/http';
+import { Http, Headers, RequestOptions } from '@angular/http';
 
 @Component({
   selector: 'app-root',
@@ -15,7 +15,16 @@ export class AppComponent {
 
   sendToAPI(value: any) {
     console.log(value);
-    this.http.post("http://spm.toolkit:4040/api/team",value)
+    var options = new RequestOptions({
+      headers: new Headers({
+        'Content-Type': 'application/json'
+      })
+    });
+
+    // http://jsonplaceholder.typicode.com/users
+    // http://localhost:4040/api/teams
+
+    this.http.get("http://localhost:4040/api/teams",options)
     .subscribe(
       data =>console.log("success!", data),
       error => console.log("could NOT post because", error)
