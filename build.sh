@@ -15,7 +15,7 @@ echo "Create Node container and build Angular"
 echo "**********************************************"
 echo
 
-docker build -t mikerap/ang-web:build . -f Dockerfile.build
+docker build -t mikerap/ang-web:build -f Dockerfile.build .
 
 docker create --name tmpbuild mikerap/ang-web:build
 

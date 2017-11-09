@@ -24,7 +24,7 @@ export class AppComponent {
     // http://jsonplaceholder.typicode.com/users
     // http://localhost:4040/api/teams
 
-    this.http.get("http://localhost:4040/api/teams",options)
+    this.http.get("http://localhost:4242/spm/teams",options)
     .subscribe(
       data =>console.log("success!", data),
       error => console.log("could NOT post because", error)
